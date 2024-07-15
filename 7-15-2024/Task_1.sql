@@ -21,7 +21,11 @@ values (3,'Book',3,1985,'no','Since');
 insert into Authors 
 values (5,'x','x',2000);
 
-select * from Books,Authors;
+--select * from Books,Authors;
+
+select * from Books;
+
+select * from Authors;
 
 select CopiesAvailable from Books
 where CopiesAvailable = 'yes';
