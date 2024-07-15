@@ -27,6 +27,9 @@ select * from Books;
 
 select * from Authors;
 
+select min(CopiesAvailable) from Books;
+select max(CopiesAvailable) from Books;
+
 select CopiesAvailable from Books
 where CopiesAvailable = 'yes';
 
