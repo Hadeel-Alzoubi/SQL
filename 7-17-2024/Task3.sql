@@ -51,7 +51,6 @@ select auther.name , book.name
 from auther
 full join book on auther.ID = book.A_ID_fk;
 
-
 --This is Practic in M : M Relation
 
 select book.ID, book.name, category.name
@@ -63,14 +62,21 @@ join category on book_category.id_category = category.ID;
 --from category,book
 --join book_category on book_category.id_book = book_category.id_category;
 
-select auther.name , book.name
-from auther
-left join book on auther.ID = book.A_ID_fk;
+select book.ID, book.name, category.name
+from book
+left join book_category on book.ID = book_category.id_book
+left join category on book_category.id_category = category.ID;
 
-select  auther.name , book.name
-from auther
-right join book on auther.ID = book.A_ID_fk;
+--select auther.name , book.name
+--from auther
+--left join book on auther.ID = book.A_ID_fk;
 
-select auther.name , book.name
-from auther
-full join book on auther.ID = book.A_ID_fk;
+select book.ID, book.name, category.name
+from book
+right join book_category on book.ID = book_category.id_book
+right join category on book_category.id_category = category.ID;
+
+select book.ID, book.name, category.name
+from book
+full join book_category on book.ID = book_category.id_book
+full join category on book_category.id_category = category.ID;
