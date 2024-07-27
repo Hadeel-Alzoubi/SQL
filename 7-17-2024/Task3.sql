@@ -34,7 +34,7 @@ foreign key (id_category) references category(ID)
 --alter table book_category
 --add id_category int;
 
---This is Practic in 1 : M Relation
+--This is Practice in 1 : M Relation
 select auther.name , book.name
 from auther
 join book on auther.ID = book.A_ID_fk;
@@ -51,7 +51,8 @@ select auther.name , book.name
 from auther
 full join book on auther.ID = book.A_ID_fk;
 
---This is Practic in M : M Relation
+
+--This is Practice in M : M Relation
 
 select book.ID, book.name, category.name
 from book
